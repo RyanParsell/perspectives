@@ -22,19 +22,44 @@ Most peer-feedback advice collapses to one rule: anchor every claim in a specifi
 
 ## How to use it with Microsoft 365 Copilot
 
-The skill is split across two files on purpose: [`SKILL.md`](SKILL.md) is the workflow Copilot follows, and [`REFERENCE.md`](REFERENCE.md) is the worked examples and pitfalls Copilot consults while drafting. Whichever path you pick, **both files need to be in Copilot's context** for the skill to work as designed.
+The skill is split across two files on purpose: [`SKILL.md`](SKILL.md) is the workflow Copilot follows, and [`REFERENCE.md`](REFERENCE.md) is the worked examples and pitfalls Copilot consults while drafting. For the best experience, set it up once as an agent so you do not need to paste the files every time.
 
-### Recommended: Build a declarative agent in Copilot Studio
-Create a custom agent in Copilot Studio with:
+### Recommended: Create an agent in Microsoft 365 Copilot
 
-- [`SKILL.md`](SKILL.md) pasted in as the agent **instructions**.
-- [`REFERENCE.md`](REFERENCE.md) added as a **knowledge source** the agent can pull from while drafting.
+Use [Agent Builder in Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder) for the lowest-friction setup. This creates a reusable declarative agent directly inside Microsoft 365 Copilot or Teams.
 
-Grant the agent access to Microsoft Graph for mail, calendar, Teams, and files. Once published, you can invoke it whenever review season comes around without re-pasting anything.
+1. Open Microsoft 365 Copilot Chat from [microsoft365.com/chat](https://microsoft365.com/chat), [office.com/chat](https://office.com/chat), or the Microsoft 365 Copilot experience in Teams.
+2. Select **New agent**.
+3. Choose **Skip to configure**.
+4. Name the agent `Perspectives`.
+5. Paste the contents of [`SKILL.md`](SKILL.md) into **Instructions**.
+6. Add [`REFERENCE.md`](REFERENCE.md) as a knowledge source by uploading it, or by selecting it from SharePoint if you store the file there.
+7. In **Knowledge**, add the work-data sources your tenant allows:
+   - **My emails**
+   - **My Teams chats and meetings**
+   - Relevant SharePoint files, folders, or sites
+   - People in your organization, if available
+8. Test the agent in the **Try it** tab.
+9. Select **Create**.
 
-This is the path the skill was designed for: Copilot loads the workflow, consults the reference material when drafting, and you get a reusable tool.
+To use it later, open the `Perspectives` agent and say:
 
-### Quick-start: Paste both files into Copilot Chat
+> I want to write a Perspective for `<peer name and alias>`.
+
+Agent Builder keeps the workflow and reference material attached to the agent, so later sessions can focus on the peer and the evidence instead of setup.
+
+### Share it with others
+
+After you create the agent, use **Share** to give access to specific people, groups, teams, or anyone in your organization, depending on your tenant policy. If you share the agent, each user still only gets results from content they are allowed to access.
+
+### Requirements and limitations
+
+- Agent Builder, email grounding, Teams grounding, People data, and SharePoint grounding depend on Microsoft 365 Copilot licensing and tenant admin policy.
+- In Agent Builder, email knowledge is not currently scoped to a person or folder at setup time. The skill handles this by instructing Copilot to search by peer and explicit date range during the conversation.
+- If your organization needs formal publishing, approval flows, custom actions, or additional channels, build the same agent in [Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-fundamentals-publish-channels) instead.
+
+### Fallback: Paste both files into Copilot Chat
+
 For a one-off, open Microsoft 365 Copilot Chat and paste **both** files as your first message, in this order:
 
 1. The contents of [`SKILL.md`](SKILL.md).
