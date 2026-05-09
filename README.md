@@ -22,20 +22,30 @@ Most peer-feedback advice collapses to one rule: anchor every claim in a specifi
 
 ## How to use it with Microsoft 365 Copilot
 
-You have a few options depending on how often you write Perspectives and how much setup you want to do.
+The skill is split across two files on purpose: [`SKILL.md`](SKILL.md) is the workflow Copilot follows, and [`REFERENCE.md`](REFERENCE.md) is the worked examples and pitfalls Copilot consults while drafting. Whichever path you pick, **both files need to be in Copilot's context** for the skill to work as designed.
 
-### Option 1: Paste as a system prompt in Copilot Chat
-Open Microsoft 365 Copilot Chat, paste the contents of [`SKILL.md`](SKILL.md) as your first message, then say:
+### Recommended: Build a declarative agent in Copilot Studio
+Create a custom agent in Copilot Studio with:
 
-> Use these instructions. I want to write a Perspective for `<peer name and alias>`.
+- [`SKILL.md`](SKILL.md) pasted in as the agent **instructions**.
+- [`REFERENCE.md`](REFERENCE.md) added as a **knowledge source** the agent can pull from while drafting.
 
-Copilot will follow the workflow: gather evidence from your Microsoft 365 data, categorize it, and interview you one question at a time.
+Grant the agent access to Microsoft Graph for mail, calendar, Teams, and files. Once published, you can invoke it whenever review season comes around without re-pasting anything.
 
-### Option 2: Build a declarative agent in Copilot Studio
-Use [`SKILL.md`](SKILL.md) as the instructions for a custom agent in Copilot Studio. Add `REFERENCE.md` as a knowledge source the agent can pull from when drafting. This gives you a reusable agent you can invoke directly when review season comes around.
+This is the path the skill was designed for: Copilot loads the workflow, consults the reference material when drafting, and you get a reusable tool.
 
-### Option 3: Save as a Copilot Lab prompt
-Trim [`SKILL.md`](SKILL.md) down to the workflow steps and save it as a personal prompt in Copilot Lab. Run it whenever you need to write a Perspective.
+### Quick-start: Paste both files into Copilot Chat
+For a one-off, open Microsoft 365 Copilot Chat and paste **both** files as your first message, in this order:
+
+1. The contents of [`SKILL.md`](SKILL.md).
+2. A separator line such as `--- REFERENCE ---`.
+3. The contents of [`REFERENCE.md`](REFERENCE.md).
+
+Then say:
+
+> Use these instructions. The reference material below the separator is for your use when drafting. I want to write a Perspective for `<peer name and alias>`.
+
+Copilot will follow the workflow and pull from the reference content when drafting. This skips the Copilot Studio setup at the cost of re-pasting both files each session.
 
 ## What's in this repo
 
