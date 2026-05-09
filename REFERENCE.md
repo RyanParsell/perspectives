@@ -65,7 +65,7 @@ If a draft is missing any of the three, the response will read as vague.
 - **Repeating what the manager already sees**: surface what only a peer would know. Cross-team collaboration patterns, debate quality, willingness to help when no one is watching.
 - **Framing critique as judgment**: "you are wrong about X" closes the conversation. "An alternative worth considering is X because Y" opens it.
 - **Forgetting the audience**: the peer's manager will read this. Anything that reads as personal or off-topic for performance evaluation does not belong.
-- **Quoting private channels verbatim**: the evidence Copilot finds in mail and chat is for grounding your judgment, not for paste-through. Paraphrase to the level of detail the manager needs.
+- **Quoting private channels verbatim**: the evidence you surface from mail and chat is for grounding your judgment, not for paste-through. Paraphrase to the level of detail the manager needs.
 
 ## Length calibration
 
