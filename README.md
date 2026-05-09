@@ -33,7 +33,9 @@ Use [Agent Builder in Microsoft 365 Copilot](https://learn.microsoft.com/en-us/m
 3. Choose **Skip to configure**.
 4. Name the agent `Perspectives`.
 5. Paste the contents of [`SKILL.md`](SKILL.md) into **Instructions**.
-6. Add [`REFERENCE.txt`](REFERENCE.txt) as a knowledge source by uploading it, or by selecting it from SharePoint if you store the file there.
+6. Add [`REFERENCE.txt`](REFERENCE.txt) as a knowledge source:
+   - If you cloned this repository, choose **Upload** and select `REFERENCE.txt` from the cloned repo folder.
+   - If you are reading this on GitHub, open [`REFERENCE.txt`](REFERENCE.txt), download the file, then choose **Upload** and select the downloaded copy.
 7. In **Knowledge**, add the work-data sources your tenant allows:
    - **My emails**
    - **My Teams chats and meetings**
