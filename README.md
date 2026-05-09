@@ -1,8 +1,8 @@
 # Perspectives
 
-A coding-assistant skill for writing **Microsoft "Perspectives" peer feedback**.
+A coding-assistant skill for writing **Microsoft style "Perspectives" (peer feedback)**.
 
-Perspectives is the peer feedback form Microsoft employees fill out for one another during the performance review cycle. The free-form text fields are easy to fill with platitudes ("great collaborator", "always helpful") and hard to fill with feedback that the peer's manager can actually use. This skill walks the assistant through the process of producing the latter.
+Perspectives is the peer feedback form used at Microsoft during the performance review cycle. The free-form text fields are easy to fill with platitudes ("great collaborator", "always helpful") and often hard to fill with feedback that the peer's manager can actually use. This skill walks you through the process of producing the latter.
 
 ## What it does
 
@@ -27,7 +27,7 @@ Most peer-feedback advice collapses to one rule: anchor every claim in a specifi
 
 ## How to deploy it
 
-The skill is split across two files: [`SKILL.md`](SKILL.md) is the workflow the assistant follows, and [`REFERENCE.md`](REFERENCE.md) is the worked examples and pitfalls it consults while drafting. Pick the deployment path that matches your assistant.
+The skill is split across two files: [`SKILL.md`](SKILL.md) is the workflow the assistant follows, and [`REFERENCE.md`](REFERENCE.md) holds the worked examples and pitfalls it consults while drafting. Pick the deployment path that matches your assistant.
 
 ### Claude Code
 
