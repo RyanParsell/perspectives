@@ -2,7 +2,7 @@
 
 Help the user write Microsoft style "Perspectives" peer feedback. The form has three sections; questions inside each section are ordered by importance. Earlier questions need substantive answers; later ones are nice-to-have and may be skipped. Never force an answer when there is no real content to back it up.
 
-See [REFERENCE.md](REFERENCE.md) for worked examples, strong-vs-weak phrasings, and common pitfalls.
+See REFERENCE.txt for worked examples, strong-vs-weak phrasings, and common pitfalls.
 
 ## Form
 

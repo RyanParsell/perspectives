@@ -18,11 +18,11 @@ The result is feedback the peer's manager can read during performance evaluation
 
 Most peer-feedback advice collapses to one rule: anchor every claim in a specific situation and tie the behavior to a tangible outcome. The skill enforces this through the **Situation → Behavior → Impact** framework. Vague praise ("you write good code") becomes evidence the manager can act on ("your reviews on the auth refactor caught two race conditions before they reached staging, and several engineers now mirror that style").
 
-`REFERENCE.md` contains worked examples of weak vs strong phrasings, common pitfalls, and length calibration.
+`REFERENCE.txt` contains worked examples of weak vs strong phrasings, common pitfalls, and length calibration.
 
 ## How to use it with Microsoft 365 Copilot
 
-The skill is split across two files on purpose: [`SKILL.md`](SKILL.md) is the workflow Copilot follows, and [`REFERENCE.md`](REFERENCE.md) is the worked examples and pitfalls Copilot consults while drafting. For the best experience, set it up once as an agent so you do not need to paste the files every time.
+The skill is split across two files on purpose: [`SKILL.md`](SKILL.md) is the workflow Copilot follows, and [`REFERENCE.txt`](REFERENCE.txt) is the worked examples and pitfalls Copilot consults while drafting. The reference material uses plain text so it can be uploaded to Agent Builder as a knowledge source. For the best experience, set it up once as an agent so you do not need to paste the files every time.
 
 ### Recommended: Create an agent in Microsoft 365 Copilot
 
@@ -33,7 +33,7 @@ Use [Agent Builder in Microsoft 365 Copilot](https://learn.microsoft.com/en-us/m
 3. Choose **Skip to configure**.
 4. Name the agent `Perspectives`.
 5. Paste the contents of [`SKILL.md`](SKILL.md) into **Instructions**.
-6. Add [`REFERENCE.md`](REFERENCE.md) as a knowledge source by uploading it, or by selecting it from SharePoint if you store the file there.
+6. Add [`REFERENCE.txt`](REFERENCE.txt) as a knowledge source by uploading it, or by selecting it from SharePoint if you store the file there.
 7. In **Knowledge**, add the work-data sources your tenant allows:
    - **My emails**
    - **My Teams chats and meetings**
@@ -64,7 +64,7 @@ For a one-off, open Microsoft 365 Copilot Chat and paste **both** files as your 
 
 1. The contents of [`SKILL.md`](SKILL.md).
 2. A separator line such as `--- REFERENCE ---`.
-3. The contents of [`REFERENCE.md`](REFERENCE.md).
+3. The contents of [`REFERENCE.txt`](REFERENCE.txt).
 
 Then say:
 
@@ -77,7 +77,7 @@ Copilot will follow the workflow and pull from the reference content when drafti
 | File | Purpose |
 | --- | --- |
 | [`SKILL.md`](SKILL.md) | The instructions Copilot follows: form structure, evidence-gathering sources, interview workflow, writing principles, output constraints. |
-| [`REFERENCE.md`](REFERENCE.md) | Worked examples (strong vs weak phrasings), the SBI skeleton, common pitfalls, length and voice calibration. |
+| [`REFERENCE.txt`](REFERENCE.txt) | Plain-text reference material with worked examples (strong vs weak phrasings), the SBI skeleton, common pitfalls, length and voice calibration. |
 | `LICENSE` | MIT. |
 
 ## Privacy
