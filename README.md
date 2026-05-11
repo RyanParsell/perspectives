@@ -7,18 +7,19 @@ Perspectives is the peer feedback form used at Microsoft during the performance 
 ## What it does
 
 1. **Asks for the peer.** Full name and alias.
-2. **Pulls 6 months of real evidence** from the user's own work data via the [WorkIQ](https://www.microsoft.com/en-us/microsoft-365/work-iq) MCP server: Outlook mail, Teams chats, calendar, SharePoint and OneDrive documents.
-3. **Categorizes** the material into shared strategy, collaboration, willingness to help, and points of debate.
-4. **Interviews the user one question at a time**, proposing a draft for each Perspectives question grounded in the evidence and structured as **Situation → Behavior → Impact** (SBI).
-5. **Drafts the responses** under tight constraints: one substantive point per question, no em dashes, audience is the peer's manager.
+2. **Calibrates interaction depth** so deep collaborations and casual peer interactions get appropriately different feedback.
+3. **Pulls recent real evidence** from the user's own work data via the [WorkIQ](https://www.microsoft.com/en-us/microsoft-365/work-iq) MCP server: Outlook mail, Teams chats, calendar, SharePoint and OneDrive documents.
+4. **Categorizes** the material into shared strategy, collaboration, willingness to help, and points of debate.
+5. **Interviews the user one question at a time**, proposing a draft for each Perspectives question grounded in the evidence. Deep collaboration uses **Situation → Behavior → Impact** (SBI); lighter interaction uses narrower context, observed contribution, and signal.
+6. **Drafts the responses** under tight constraints: one substantive point per question, no em dashes, audience is the peer's manager.
 
 The result is feedback the peer's manager can read during performance evaluation and walk away with a sharper picture of the peer than they had before.
 
-## Why SBI
+## Why calibration matters
 
-Most peer-feedback advice collapses to one rule: anchor every claim in a specific situation and tie the behavior to a tangible outcome. The skill enforces this through the **Situation → Behavior → Impact** framework. Vague praise ("you write good code") becomes evidence the manager can act on ("your reviews on the auth refactor caught two race conditions before they reached staging, and several engineers now mirror that style").
+Most peer-feedback advice collapses to one rule: anchor every claim in a specific situation and tie the behavior to a tangible outcome. That is right for deep collaboration, where **Situation → Behavior → Impact** can produce evidence the manager can act on. For casual peers, forcing SBI can overstate the relationship. This skill first decides whether the feedback should be deep or light, then writes at the right level of confidence.
 
-[`REFERENCE.md`](REFERENCE.md) contains worked examples of weak vs strong phrasings, common pitfalls, and length calibration.
+[`REFERENCE.md`](REFERENCE.md) contains worked examples of deep SBI feedback, light limited-context feedback, common pitfalls, and length calibration.
 
 ## Requirements
 
@@ -101,7 +102,7 @@ Then invoke `/perspectives` from Copilot Chat in that workspace.
 | File | Purpose |
 | --- | --- |
 | [`SKILL.md`](SKILL.md) | Canonical workflow the assistant follows: form structure, evidence-gathering steps, interview workflow, writing principles, output constraints. Format works as a Claude Code skill and a Codex skill. |
-| [`REFERENCE.md`](REFERENCE.md) | Worked examples (strong vs weak phrasings), the SBI skeleton, common pitfalls, length and voice calibration. |
+| [`REFERENCE.md`](REFERENCE.md) | Worked examples for deep and light feedback, strong vs weak phrasings, common pitfalls, length and voice calibration. |
 | [`.github/prompts/perspectives.prompt.md`](.github/prompts/perspectives.prompt.md) | GitHub Copilot prompt file. References `SKILL.md` and `REFERENCE.md` from the workspace. |
 | `LICENSE` | MIT. |
 

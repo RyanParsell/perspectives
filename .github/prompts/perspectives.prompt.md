@@ -1,5 +1,5 @@
 ---
-description: Draft a Microsoft "Perspectives" peer review grounded in 6 months of real cross-collaboration evidence, structured as Situation-Behavior-Impact (SBI).
+description: Draft a Microsoft "Perspectives" peer review grounded in recent collaboration evidence, using SBI for deep collaborations and lighter calibrated feedback for limited interactions.
 mode: agent
 ---
 
